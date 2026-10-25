@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <h1>Products</h1>
+    </header>
+
+    <main>
+
+
+    </main>
+
+    <section>
+
+        <h2 id="name"></h2>
+        <p id="price"></p>
+        <img id="img" src="" alt="">
+        <p id="features"></p>
+        <p id="count"></p>
+        <p id="discount"></p>
+
+    </section>
+
+    <section>
+
+        <h2 id="name"></h2>
+        <p id="price"></p>
+        <img id="img" src="" alt="">
+        <p id="features"></p>
+        <p id="count"></p>
+        <p id="discount"></p>
+
+    </section>
+    <img src="" alt="">
+
+
+    <script>
+        let products = [
+            {
+                name: "Mouse",
+                price: 1000,
+                img: "",
+                features: "loremhello width s esy sie rte ore nire  frire0",
+                count: 1,
+                discount: .25,
+                payment: function () {
+                    return this.count * ((this.price) - (this.price * this.discount));
+                }
+
+
+            },
+            {
+                name: "keyboard",
+                price: 1500,
+                img: "",
+                features: "loremhello width s esy sie rte ore nire  frire0",
+                count: 1,
+
+                discount: .20,
+                payment: function () {
+                    return this.count * ((this.price) - (this.price * this.discount));
+                }
+
+            },
+            {
+                name: "monitor",
+                price: 2500,
+                img: "",
+                features: "loremhello width s esy sie rte ore nire  frire0",
+                count: 2,
+
+                discount: .10,
+                payment: function () {
+                    return this.count * ((this.price) - (this.price * this.discount));
+                }
+            }
+        ]
+
+        document.getElementById("")
+
+        for (let i = 0; i < products.length; i++) {
+
+            document.getElementById("name").innerHTML += products[i].name + '<br>' + products[i].price + '<br>' + products[i].img + '<br>' + products[i].features + '<br>' + products[i].count + '<br>' + products[i].discount + '<br>';
+
+        }
+    </script>
+
+</body>
+
+</html>

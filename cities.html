@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="text-bg-dark text-center p-5">
+        <h1 id="title"></h1>
+    </header>
+    <main class="container-fluid">
+        <section class="row">
+            <aside class="col-md-4">
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="getcity(0)">London</a></li>
+                        <li><a href="#" onclick="getcity(1)">paris</a></li>
+                        <li><a href="#" onclick="getcity(2)">Tokyo</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <article class="col-md-8 bg-body">
+                <h2 id="cityname"></h2>
+                <img id="pic" src="" alt="">
+                <p id="info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat est totam commodi
+                    voluptatibus aliquid nostrum incidunt, laborum magni nesciunt a nam quasi deserunt omnis ut minus
+                    expedita. Ipsa, debitis! Labore!</p>
+                <p id="desc">Aut ab architecto dolor! Eos dicta inventore iste tempore velit repellat numquam veniam,
+                    nemo quia beatae impedit quae repellendus? Dicta inventore nisi perspiciatis fuga aspernatur numquam
+                    quae maxime alias a!</p>
+            </article>
+
+        </section>
+    </main>
+    <footer class="text-bg-dark text-center p-3">
+        <p>copyright</p>
+    </footer>
+    <script>
+        let cities = [
+            {
+
+                cityname: "London",
+                citiyimage: "images/London.webp",
+                cityinfo: "London[d] is the capital and largest city[e] of England and the United Kingdom, with a population of 9.14 million people in 2025.[7] Its wider metropolitan area is the largest in Western Europe, with a population of 15.4 million.[4] ",
+                citydesc: "London stands on the River Thames in southeast England, at the head of a 50-mile (80 km) tidal estuary down to the North Sea, and has been a major settlement for nearly 2,000 years."
+            },
+            {
+                cityname: "Paris",
+                citiyimage: "images/paris.webp",
+                cityinfo: "Paris[b] is the capital and largest city of France, with an estimated city population of 2.04 million in an area of 105.4 km2 (40.7 sq mi), as of January 2026,[4] and a metropolitan population of 13.3 million (2023). Located on the Seine in the centre of the Île-de-France region, it is the largest metropolitan area and fourth-most populous city in the European Union (EU). Paris is nicknamed the 'City of Light' mainly due to its leading role in the Age of Enlightenment. ",
+                citydesc: "Administratively, Paris is divided into twenty arrondissements (districts), each with their own cultural identity. Haussmann's renovation of Paris, which created new boulevards, parks, and public works, gave birth to a modern city known as the 'capital of the 19th century'. Paris is a major railway, motorway, and air-transport hub; in 2024 Charles de Gaulle Airport was the EU'..."
+            },
+            {
+                cityname: "Tokyo",
+                citiyimage: "images/tokyo.webp",
+                cityinfo: "Tokyo,[a] officially the Tokyo Metropolis,[b] is the capital and most populous city of Japan. The population of the city proper was over 14 million as of 2023. The Greater Tokyo Area, which includes Tokyo and parts of six neighboring prefectures, is the third-most populous metropolitan area in the world, with 33 million residents as of 2025.[13]",
+                citydesc: "Lying at the head of Tokyo Bay, Tokyo is part of the Kantō region, on the central coast of Honshu, Japan's largest island. It is Japan's economic center and the seat of the Japanese government and the Emperor of Japan. "
+            }
+
+        ];
+        document.getElementById("title").innerText = "Cities";
+       
+
+        function getcity(i) {
+            document.getElementById("cityname").innerText = cities[i].cityname;
+             document.getElementById("pic").src=cities[i].citiyimage;
+            document.getElementById("info").innerText = cities[i].cityinfo;
+            document.getElementById("desc").innerText = cities[i].citydesc;
+
+        }
+        getcity(0);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

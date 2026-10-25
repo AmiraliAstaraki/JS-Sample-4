@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+
+
+    <script>
+        let students=[
+            {
+            fname: "john",
+            lname: "doe",
+            grade: "b"
+        },
+        {
+            fname:"jane",
+            lname: "Doe",
+            grade: "a"
+        },
+        {
+           fname :"robbin",
+           lname: "doe",
+           grade: "c"
+        }
+        
+    ];
+
+    let para=document.getElementById("demo");
+    for (let i = 0; i < students.length; i++) {
+        para.innerHTML += students[i].fname+ "<br>"+ students[i].lname +"<br>"+ 
+        students[i].grade+"<br>"
+        
+    }
+    </script>
+
+
+    
+</body>
+</html>
